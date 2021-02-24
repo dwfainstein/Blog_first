@@ -1,0 +1,32 @@
+---
+title: "A Post"
+description: |
+  A short description of the post.
+author:
+  - name: Nora Jones
+    url: https://example.com/norajones
+date: 02-24-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Plots forthcoming
+
+```{r P1}
+library(tidyverse)
+ggplot(mtcars, aes(disp, mpg))+
+  geom_point() +
+  geom_smooth() +
+  labs(title = "MTcars plot",
+       subtitle = "What a Classic")
+  theme_classic()
+
+```
+
+
